@@ -6,5 +6,5 @@ namespace App\User\Create;
 
 interface UserInterface
 {
-    public function __construct(string $firsName, string $lastName, string $email, string $password);
+    public function __construct(string $firstName, string $lastName, string $email, string $password);
 }
