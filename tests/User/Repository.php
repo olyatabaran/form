@@ -5,15 +5,13 @@ declare(strict_types=1);
 namespace App\Tests\User;
 
 use App\User\Create\UserInterface;
-use App\User\Repository\User;
+
 
 class Repository implements \App\User\Create\Repository
 {
-    public $createWasCalled = false;
-    /**
-     * @var User
-     */
-    public $user = null;
+    public bool $createWasCalled = false;
+
+    public ?UserInterface $user;
 
     public function create(UserInterface $user): bool
     {
