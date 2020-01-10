@@ -31,7 +31,7 @@ class Builder implements \App\User\Read\Builder
 
     public function build():UserInterface
     {
-        $user = new \App\Tests\User\Read\User($this->firstName, $this->lastName, $this->email);
-        return $user;
+       $user = new User($this->firstName, $this->lastName, $this->email, $this->password);
+      return $user;
     }
 }
