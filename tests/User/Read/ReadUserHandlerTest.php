@@ -19,10 +19,12 @@ class ReadUserHandlerTest extends TestCase
 
         $handler->handle();
 
-        static::assertEquals("Vasya" , $handler->getFirstName());
         static::assertEquals("Pupkin" , $userRepository->read($readUserCommand->getId())->getLastName());
+        static::assertEquals("Vasya" , $userRepository->read($readUserCommand->getId())->getFirstName());
         static::assertEquals("vasya@mail.ru" , $userRepository->read($readUserCommand->getId())->getEmail());
+        static::assertEquals(0, $userRepository->read($readUserCommand->getId())->getId());
 
 
     }
+
 }

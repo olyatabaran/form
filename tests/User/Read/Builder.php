@@ -3,7 +3,7 @@
 
 namespace App\Tests\User\Read;
 
-use App\User\Create\UserInterface;
+use App\User\Create\User;
 
 class Builder implements \App\User\Read\Builder
 {
@@ -29,9 +29,9 @@ class Builder implements \App\User\Read\Builder
         return $this;
     }
 
-    public function build():UserInterface
+    public function build():User
     {
-       $user = new User($this->firstName, $this->lastName, $this->email, $this->password);
+       $user = new User($this->firstName, $this->lastName, $this->email);
       return $user;
     }
 }

@@ -6,5 +6,5 @@ namespace App\User\Create;
 
 interface Repository
 {
-    public  function create(UserInterface $user): bool;
+    public  function create(User $user): bool;
 }

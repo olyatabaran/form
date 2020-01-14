@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Tests\User\Create;
 
-use App\User\Create\UserInterface;
+use App\User\Create;
 
-class User implements UserInterface
+class User implements Create\User
 {
 
     private string $firstName;

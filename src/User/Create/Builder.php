@@ -15,5 +15,5 @@ interface Builder
 
     public function setPassword(string $getPassword):self;
 
-    public function build():UserInterface;
+    public function build():User;
 }

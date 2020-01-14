@@ -6,8 +6,5 @@ namespace App\User\Create;
 
 interface User
 {
-    public function getFirstName(): string;
-    public function getLastName(): string;
-    public function getEmail(): string;
-    public function getPassword(): string;
+    public function __construct(string $firstName, string $lastName, string $email, string $password);
 }

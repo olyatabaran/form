@@ -3,7 +3,7 @@
 
 namespace App\User\Read;
 
-use App\User\Create\UserInterface;
+use App\User\Create\User;
 
 interface Builder
 {
@@ -13,6 +13,6 @@ interface Builder
 
     public function setEmail(string $getEmail):self;
 
-    public function build():UserInterface;
+    public function build():User;
 
 }

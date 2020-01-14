@@ -17,6 +17,9 @@ class Repository implements \App\User\Read\Repository
 
     public function read(int $id): User
     {
-        return new User();
+        if($id === $this->user->getId())
+        {
+            return $this->user;
+        }
     }
 }
