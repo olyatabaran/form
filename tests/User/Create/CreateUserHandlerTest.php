@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Tests\User\Create;
 
-use App\Tests\User\Create\Repository;
 use App\User\Create\Command;
 use App\User\Create\Handler;
 use PHPUnit\Framework\TestCase;
