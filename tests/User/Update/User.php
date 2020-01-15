@@ -17,6 +17,15 @@ class User implements \App\User\Update\User
     private string $password;
 
 
+    public function __construct($id = 0, $firstName = '', $lastName = '', $email = '', $password = '')
+    {
+        $this->id = $id;
+        $this->firstName = $firstName;
+        $this->email = $email;
+        $this->password = $password;
+        $this->lastName = $lastName;
+    }
+
 
     public function getFirstName(): string
     {
@@ -35,7 +44,7 @@ class User implements \App\User\Update\User
     }
 
 
-    public function getId(): string
+    public function getId(): int
     {
         return $this->id;
     }

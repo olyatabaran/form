@@ -11,7 +11,7 @@ class Handler
 {
     private Command $updateUserCommand;
     private Repository $repository;
-    private  Builder $builder;
+    private Builder $builder;
 
     public function __construct(Command $updateUserCommand, Repository $repository, Builder $builder)
     {
@@ -23,11 +23,11 @@ class Handler
 
     public function handle()
     {
-        $user = $this->builder->setFirstName($this->updateUserCommand->getFirstName())
-            ->setLastName($this->updateUserCommand->getLastName())
-            ->setEmail($this->updateUserCommand->getEmail())
-            ->setPassword($this->updateUserCommand->getPassword())
+        $user = $this->builder->setFirstName($this->updateUserCommand->getFirstName(0))
+            ->setLastName($this->updateUserCommand->getLastName(0))
+            ->setEmail($this->updateUserCommand->getEmail(0))
+            ->setPassword($this->updateUserCommand->getPassword(0))
             ->build();
-        $this->repository->create($user);
+        $this->repository->update($user);
     }
 }
